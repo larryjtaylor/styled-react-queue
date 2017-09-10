@@ -7,5 +7,6 @@ function liveTime() {
     app,
     document.getElementById('react-app-root')
   );
-    
 }
+
+setInterval(liveTime, 1000);
