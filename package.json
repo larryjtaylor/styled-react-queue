@@ -1,0 +1,11 @@
+{
+  "name": "react-help-queue",
+  "version": "1.0.0",
+  "description": "a queue to receive help with react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Scher",
+  "license": "ISC"
+}
