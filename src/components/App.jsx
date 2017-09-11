@@ -7,7 +7,6 @@ function App(props) {
     <div>
       <Header/>
       <TicketList />
-      {/* <h2>{new Date().toLocaleTimeString()}</h2> */}
     </div>
   );
 }
