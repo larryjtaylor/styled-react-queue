@@ -14,7 +14,7 @@ function Ticket(props) {
 Ticket.propTypes = {
   names: PropTypes.string,
   location: PropTypes.string,
-  issue: PropTypes.string;
+  issue: PropTypes.string,
 };
 
 export default Ticket;
