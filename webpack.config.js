@@ -4,12 +4,12 @@ const { resolve } = require('path');
 module.exports = {
 
   entry: [
-    resolve(_dirname, "src") + "index.jsx"
+    resolve(__dirname, "src") + "/index.jsx"
   ],
 
   output: {
     filename: 'app.bundle.js',
-    path: resolve(_dirname, 'build'),
+    path: resolve(__dirname, 'build'),
   },
 
   resolve: {
