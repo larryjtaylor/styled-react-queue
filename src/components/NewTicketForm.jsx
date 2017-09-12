@@ -20,3 +20,5 @@ function NewTicketForm(props) {
     </div>
   )
 }
+
+export default NewTicketForm;
