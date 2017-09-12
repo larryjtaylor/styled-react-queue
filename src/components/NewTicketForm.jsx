@@ -15,7 +15,7 @@ class NewTicketForm extends React.Component {
     const { _names, _location, _issue } = this.refs;
     var newTicket = new Ticket(_names.value, _location.value, _issue.value);
 
-    console.log(newTicket);
+    this.props.onNewTicketCreation(newTicket);
   }
 
   render() {
