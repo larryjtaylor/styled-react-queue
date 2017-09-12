@@ -2,13 +2,23 @@ import React from "react";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
 
-function Queue() {
-  return(
-    <div>
-      <TicketList/>
-      <NewTicketControl/>
-    </div>
-  )
+class Queue extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterTicketList: [],
+    };
+  }
+
+  render() {
+    return(
+      <div>
+        <TicketList/>
+        <NewTicketControl/>
+      </div>
+    )
+  }
 }
 
 export default Queue;
