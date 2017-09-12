@@ -2,8 +2,16 @@ import React from 'react';
 
 class NewTicketForm extends React.Component {
 
-  function handleNewTicketFormSubmission(event) {
+  constructor(props) {
+    super(props);
+    this.handleNewTicketFormSubmission = this.handleNewTicketFormSubmission.bind(this);
+  }
+
+  handleNewTicketFormSubmission(event) {
     event.preventDefault()
+    console.log(this.refs._names.value);
+    const { _names, _location, _issue } = this.refs;
+    alert(`Data Gathered! ${_names.value}, ${_location.value}, ${_issue.value}`);
   }
 
   render() {
