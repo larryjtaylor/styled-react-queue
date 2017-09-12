@@ -1,14 +1,12 @@
 import React from "react";
-import TicketList from "./TicketList";
 import Header from "./Header";
-import NewTicketControl from "./NewTicketControl";
+import Queue from './Queue';
 
 function App(props) {
   return (
     <div>
       <Header/>
-      <TicketList/>
-      <NewTicketControl/>
+      <Queue/>
     </div>
   );
 }
