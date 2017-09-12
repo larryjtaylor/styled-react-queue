@@ -1,5 +1,6 @@
 import React from 'react';
 import NewTicketForm from './NewTicketForm';
+import PropTypes from "prop-types";
 
 class NewTicketControl extends React.Component {
 
@@ -28,6 +29,10 @@ class NewTicketControl extends React.Component {
       </div>
     );
   }
+}
+
+NewTicketControl.propTypes = {
+  onNewTicketCreation: PropTypes.func
 }
 
 export default NewTicketControl;
