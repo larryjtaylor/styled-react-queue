@@ -1,6 +1,7 @@
 import React from 'react';
 import NewTicketForm from './NewTicketForm';
 import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 
 class NewTicketControl extends React.Component {
 
@@ -21,7 +22,7 @@ class NewTicketControl extends React.Component {
     if (this.state.formVisibleOnPage) {
       formAreaContent = <NewTicketForm onNewTicketCreation={this.props.onNewTicketCreation}/>
     } else {
-      formAreaContent = <button onClick={this.handleDisplayingNewTicketForm.bind(this)}>Request Help</button>
+      formAreaContent = <Button block bstyle="primary" bsSize="large" onClick={this.handleDisplayingNewTicketForm.bind(this)}>Request Help</Button>
     }
     return (
       <div>
