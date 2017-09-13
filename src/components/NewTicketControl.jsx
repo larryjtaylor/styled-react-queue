@@ -26,7 +26,7 @@ class NewTicketControl extends React.Component {
       <div>
         <Button
             block
-            bstyle="primary"
+            bsStyle="primary"
             bsSize="large"
             onClick={this.showFormModal}>
                 Request Help

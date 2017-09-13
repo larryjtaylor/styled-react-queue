@@ -6,6 +6,7 @@ function Ticket(props) {
     <div>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
+      <p>{props.timeSinceOpened}</p>
       <hr/>
     </div>
   );
@@ -14,6 +15,7 @@ function Ticket(props) {
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
+  timeSinceOpened: PropTypes.string.isRequired,
   issue: PropTypes.string,
 };
 
