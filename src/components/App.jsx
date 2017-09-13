@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Header";
-import Queue from './Queue';
+import Queue from "./Queue";
 
-function App(props) {
+function App() {
   return (
     <div>
       <Header/>

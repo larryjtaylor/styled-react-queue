@@ -9,14 +9,14 @@ const render = (Component) => {
     <AppContainer>
       <Component/>
     </AppContainer>,
-    document.getElementById('react-app-root')
+    document.getElementById("react-app-root")
   );
 };
 
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(App)
+  module.hot.accept("./components/App", () => {
+    render(App);
   });
 }

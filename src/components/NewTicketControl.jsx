@@ -1,5 +1,5 @@
-import React from 'react';
-import NewTicketForm from './NewTicketForm';
+import React from "react";
+import NewTicketForm from "./NewTicketForm";
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
@@ -13,11 +13,11 @@ class NewTicketControl extends React.Component {
     this.state = {formModalIsShowing: false};
   }
 
-  showFormModal(event) {
+  showFormModal() {
     this.setState({formModalIsShowing: true});
   }
 
-  hideFormModal(event) {
+  hideFormModal() {
     this.setState({formModalIsShowing: false});
   }
 
@@ -25,22 +25,23 @@ class NewTicketControl extends React.Component {
     return (
       <div>
         <Button
-          block
-          bstyle="primary"
-          bsSize="large"
-          onClick={this.showFormModal}>
-            Request Help
+            block
+            bstyle="primary"
+            bsSize="large"
+            onClick={this.showFormModal}>
+                Request Help
         </Button>
         <Modal
-          show={this.state.formModalIsShowing}
-          onHide={this.hideFormModal}
-          bsSize="large">
+            show={this.state.formModalIsShowing}
+            onHide={this.hideFormModal}
+            bsSize="large">
           <Modal.Header>
             <Modal.Title>Request Help!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <NewTicketForm      onNewTicketCreation={this.props.onNewTicketCreation}
-              hideFormAfterSubmission = {this.hideFormAfterModal}/>
+            <NewTicketForm
+                onNewTicketCreation={this.props.onNewTicketCreation}
+                hideFormAfterSubmission = {this.hideFormAfterModal}/>
           </Modal.Body>
         </Modal>
       </div>
@@ -50,6 +51,6 @@ class NewTicketControl extends React.Component {
 
 NewTicketControl.propTypes = {
   onNewTicketCreation: PropTypes.func
-}
+};
 
 export default NewTicketControl;
