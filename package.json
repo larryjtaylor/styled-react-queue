@@ -1,7 +1,7 @@
 {
   "name": "react-help-queue",
   "version": "1.0.0",
-  "description": "a queue to receive help with react",
+  "issue": "a queue to receive help with react",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",

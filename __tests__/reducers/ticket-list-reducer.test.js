@@ -9,7 +9,7 @@ describe("Ticket list reducer", () => {
       'Aimen'
     ],
     location: '4B',
-    description: 'Jest is being a diva and won\'t work well with webpack.',
+    issue: 'Jest is being a diva and won\'t work well with webpack.',
     timeOpened: 1500000000000,
     id: 0
   };
@@ -19,17 +19,17 @@ describe("Ticket list reducer", () => {
   });
 
   test('should add ticket to list array', () => {
-    const { names, location, description, timeOpened, id } = ticketInfo;
+    const { names, location, issue, timeOpened, id } = ticketInfo;
     action = {
       type: c.ADD_TICKET,
       names: names,
       location: location,
-      description: description,
+      issue: issue,
       timeOpened: timeOpened,
       id: id
     };
     const futureState = [ ticketInfo ];
     expect(ticketList([], action)).toEqual([ ticketInfo ]);
   });
-  
+
 });

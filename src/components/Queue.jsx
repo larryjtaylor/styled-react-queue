@@ -1,6 +1,7 @@
 import React from "react";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
+import { connect } from 'react-redux';
 
 class Queue extends React.Component {
 
@@ -13,33 +14,11 @@ class Queue extends React.Component {
     this.updateTicketTimeSinceOpened = this.updateTicketTimeSinceOpened.bind(this);
   }
 
-  componentWillMount() {
-    console.log('componentWillMount');
-  }
-
   componentDidMount() {
-    console.log('componentDidMount');
     this.timeSinceOpenedChecker = setInterval(() =>
       this.updateTicketTimeSinceOpened(),
       5000
     );
-  }
-
-  componentWillReceiveProps() {
-    console.log('componentWillReceiveProps');
-  }
-
-  shouldComponentUpdate() {
-    console.log('shouldComponentUpdate');
-    return true;
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate');
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
   }
 
   componentWillUnmount(){
@@ -49,26 +28,22 @@ class Queue extends React.Component {
   addNewTicketToList(newTicket) {
     let newMasterTicketList = this.state.masterTicketList.slice();
     newMasterTicketList.push(newTicket);
-    console.log('setState');
     this.setState({masterTicketList: newMasterTicketList});
   }
 
   updateTicketTimeSinceOpened() {
-    console.log("check");
     let newMasterTicketList = this.state.masterTicketList.slice();
     newMasterTicketList.forEach((ticket) =>
       ticket.setTimeSinceOpened()
     );
-    console.log('setState');
     this.setState({masterTicketList:newMasterTicketList})
   }
 
   render() {
-    console.log('render');
     return(
       <div>
         <TicketList
-            ticketList = {this.state.masterTicketList}/>
+            ticketList = {this.props.masterTicketList}/>
         <NewTicketControl
             onNewTicketCreation = {this.addNewTicketToList}/>
       </div>
@@ -76,4 +51,11 @@ class Queue extends React.Component {
   }
 }
 
-export default Queue;
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    masterTicketList : state
+  }
+}
+
+export default connect(mapStateToProps)(Queue);
