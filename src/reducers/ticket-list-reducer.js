@@ -12,6 +12,9 @@ export default (state = [], action) => {
           id : id
         }
       ]
+    case 'CLOSE_TICKET':
+      const updatedTicketList = state.filter(ticket => ticket.id !== action.ticketId);
+      return updatedTicketList
     default:
       return state;
   }
