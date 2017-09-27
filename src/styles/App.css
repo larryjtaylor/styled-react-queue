@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body, .app {
+  height: 100vh;
+  min-height: 100%;
+}
+
+#react-app-root {
+  background-color: #FCFFFD;
+}

@@ -9,6 +9,7 @@ import { HashRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import middlewareLogger from './middleware/middleware-logger';
 import persistDataLocally from './middleware/persist-local-storage-data';
+import styles from './styles/styles.css';
 
 let retrievedState;
 try {
